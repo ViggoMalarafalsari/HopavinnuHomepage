@@ -1,0 +1,40 @@
+/*
+* Hér komur allt sem tengist settings
+*/
+* {
+    margin: 0;
+    padding: 0;
+  }
+  html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  :root {
+    --spacing: 1rem;
+    --max-width: 1600px;
+    --grid-width: calc(100% -(2 * var(--offset)));
+  
+    --color-primary: #FFFFFF;
+    --color-header: #fff;
+    --color-text: #000;
+    --color-border: #ccc;
+    --color-header-nav: #9B9B9B;
+    --color-lightbrown: #E3CDB1;
+    --color-grey: #5E5B69;
+    --color-book-section: #F7F1EB;
+  
+    --font-base-body-px: 16px;
+    --font-base-size: 1rem;
+    --font-base-size-600: 1.1rem;
+    --font-h1-size: 60px;
+    --font-family-playfair: 'Playfair Display', serif;
+    --font-family-poppins: 'poppins', sans-serif;
+
+    --columns: 12;
+    --gutter: 30px;
+    --offset: 20px;  
+  }
+ 

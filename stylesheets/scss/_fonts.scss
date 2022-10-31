@@ -1,0 +1,27 @@
+/*
+****Fonts****
+*/
+@font-face {
+    font-display: swap;
+    font-family: 'poppins';
+    font-style: normal;
+    src: url('/fonts/Poppins/Poppins-Regular.ttf') format('woff');
+}
+@font-face {
+  font-display: swap;
+  font-family: 'PlayfairDisplay';
+  font-style: normal;
+  src: url('/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf') format('woff');
+}
+
+h1 > h2 > h3 {
+  font-family: var(--font-family-playfair);
+} 
+h1 {
+  font-size: var(--font-h1-size);
+}
+p {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-base-body-px);
+}
+

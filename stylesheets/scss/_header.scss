@@ -1,0 +1,33 @@
+/*
+* Hér komur allt sem tengist header
+*/
+header {
+    background-color: #FAFAFA;
+    box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.08);
+    padding: 20px 0;
+    z-index: 999999;
+}
+.header-container {
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav .logo {
+    align-items: center;
+}
+ul {
+    list-style: none;
+    display: flex;
+    gap: var(--gutter);
+}
+a {
+    text-decoration: none;
+}
+header nav li {
+    color: var(--color-header-nav);
+    font-family: var(--font-family-poppins);
+}

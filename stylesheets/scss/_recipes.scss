@@ -1,0 +1,113 @@
+/*
+* Hér er allt sem tengist recipes
+*/
+.recipes {
+    margin: 0 auto;
+    z-index: 9999999;
+    gap: var(--spacing);
+    max-width: var(--max-width);
+  }
+  .recipes .cards {
+    display: flex;
+  }
+  .recipes h2 {
+    margin-bottom: var(--spacing);
+  }
+  .cards {
+    gap: calc(var(--spacing) * 3);  
+  }
+  .card-efri {
+    display: flex;
+    flex-direction: column;
+    width: 683px;  
+  }
+  .card-efri > .image {
+    order: -1;
+    height: 200px;
+  }
+  .card-efri > .image img {
+    object-fit: cover;
+    object-position: 50% 50%;
+    width: 100%;
+    height: 200px;
+  }
+  .card-efri > .recipe-content {  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing);
+  }
+  .card-efri > .recipe-content > p {
+    flex: 1;
+  }
+  .card-nedri {
+    display: flex;
+    flex-direction: column;
+    width: 683px;
+  }
+  .recipe-content > .image {
+    order: -1;
+    height: 200px;
+  }
+  .recipe-content > .image img {
+    object-fit: cover;
+    object-position: 50% 50%;
+  
+    width: 100%;
+    height: 200px;
+  }
+  .card-nedri > .recipe-content {  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: var(--spacing);
+  }
+  .card-nedri > .recipe-content > p {
+    flex: 1;
+  }
+  .cards a { 
+    color: var(--color-lightbrown);
+    justify-content: flex-end;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+  }
+  .content-row {
+    display: flex;
+    justify-content: space-between;
+  }
+  @mixin button-style {
+    background-color: transparent;
+    color: var(--color-lightbrown);
+    border-color: var(--color-lightbrown);
+    border-style: solid;
+    border-width: 1px;
+    padding: {
+      top: 1rem;
+      bottom: 1rem;
+      left: 4rem;
+      right: 4rem;
+    }
+  }
+  .seemore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    button {
+      @include button-style;
+      margin: {
+        left: 2rem;
+        right: 2rem;
+      }
+    }
+    hr {
+      flex: 1;
+      height: 1px;
+      color: var(--color-lightbrown);
+      border-style: solid;
+    }
+  }
+

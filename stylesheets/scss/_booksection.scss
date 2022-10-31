@@ -1,0 +1,35 @@
+/*
+* Hér er allt sem tengist Book section svæðinu
+*/
+
+.container {
+    background-color: var(--color-book-section);
+    height: 75vh;
+    display: flex;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+.container .left-column {
+    display: flex;
+    align-items: center;
+}
+.container .right-column img {
+    position: absolute;
+    margin-top: 150px;
+    box-shadow: -5px -5px 10px gray;
+}
+.button {
+    background-color: transparent;
+    color: var(--color-lightbrown);
+    border-color: var(--color-lightbrown);
+    border-style: solid;
+    border-width: 1px;
+    padding: {
+      top: 1rem;
+      bottom: 1rem;
+      left: 4rem;
+      right: 4rem;
+    }
+}
+
+

@@ -1,0 +1,407 @@
+@charset "UTF-8";
+/*
+*   Hér koma importin frá hinum scss file-onum.
+*   þessi skrá tengist scss skránum sem tengist 
+*   síðan styles.css
+*/
+/*
+* Hér komur allt sem tengist settings
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  --spacing: 1rem;
+  --max-width: 1600px;
+  --grid-width: calc(100% -(2 * var(--offset)));
+  --color-primary: #FFFFFF;
+  --color-header: #fff;
+  --color-text: #000;
+  --color-border: #ccc;
+  --color-header-nav: #9B9B9B;
+  --color-lightbrown: #E3CDB1;
+  --color-grey: #5E5B69;
+  --color-book-section: #F7F1EB;
+  --font-base-body-px: 16px;
+  --font-base-size: 1rem;
+  --font-base-size-600: 1.1rem;
+  --font-h1-size: 60px;
+  --font-family-playfair: "Playfair Display", serif;
+  --font-family-poppins: "poppins", sans-serif;
+  --columns: 12;
+  --gutter: 30px;
+  --offset: 20px;
+}
+
+/*
+* Hér komur allt sem tengist header
+*/
+header {
+  background-color: #FAFAFA;
+  box-shadow: 5px 5px 5px rgba(1, 1, 1, 0.08);
+  padding: 20px 0;
+  z-index: 999999;
+}
+
+.header-container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav .logo {
+  align-items: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: var(--gutter);
+}
+
+a {
+  text-decoration: none;
+}
+
+header nav li {
+  color: var(--color-header-nav);
+  font-family: var(--font-family-poppins);
+}
+
+/*
+* Hér komur allt almennt
+*/
+body {
+  color: var(--color-text);
+  font-size: var(--font-base-body-px);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: auto;
+  gap: var(--gutter);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--spacing) * 4);
+  margin: 0 auto;
+  padding-left: calc(var(--spacing) * 2);
+  padding-right: calc(var(--spacing) * 2);
+}
+
+.protection {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 100000;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.lightbrown {
+  color: var(--color-lightbrown);
+}
+
+.grey {
+  color: var(--color-grey);
+}
+
+/*
+* Hér er allt sem tengist recipes
+*/
+.recipes {
+  margin: 0 auto;
+  z-index: 9999999;
+  gap: var(--spacing);
+  max-width: var(--max-width);
+}
+
+.recipes .cards {
+  display: flex;
+}
+
+.recipes h2 {
+  margin-bottom: var(--spacing);
+}
+
+.cards {
+  gap: calc(var(--spacing) * 3);
+}
+
+.card-efri {
+  display: flex;
+  flex-direction: column;
+  width: 683px;
+}
+
+.card-efri > .image {
+  order: -1;
+  height: 200px;
+}
+
+.card-efri > .image img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 200px;
+}
+
+.card-efri > .recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.card-efri > .recipe-content > p {
+  flex: 1;
+}
+
+.card-nedri {
+  display: flex;
+  flex-direction: column;
+  width: 683px;
+}
+
+.recipe-content > .image {
+  order: -1;
+  height: 200px;
+}
+
+.recipe-content > .image img {
+  object-fit: cover;
+  object-position: 50% 50%;
+  width: 100%;
+  height: 200px;
+}
+
+.card-nedri > .recipe-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing);
+}
+
+.card-nedri > .recipe-content > p {
+  flex: 1;
+}
+
+.cards a {
+  color: var(--color-lightbrown);
+  justify-content: flex-end;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+}
+
+.content-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.seemore {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.seemore button {
+  background-color: transparent;
+  color: var(--color-lightbrown);
+  border-color: var(--color-lightbrown);
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+.seemore hr {
+  flex: 1;
+  height: 1px;
+  color: var(--color-lightbrown);
+  border-style: solid;
+}
+
+/*
+* Hero svæði
+*/
+.banner {
+  display: flex;
+  margin: 0 auto;
+  align-items: center;
+  box-shadow: 20px 10px 20px black;
+  max-width: var(--max-width);
+}
+
+.left-column, .right-column {
+  flex-basis: 50%;
+}
+
+.banner .right-column img {
+  width: 100%;
+}
+
+.banner .left-column {
+  flex-direction: column;
+}
+
+.button {
+  display: flex;
+  border: 2px var(--color-lightbrown);
+  color: black;
+  background: linear-gradient to right, var(--color-lightbrown) 0%, var(--color-lightbrown) 50%, var(--color-primary) 0%, var(--color-primary) 50%;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 40px;
+}
+
+/*
+****Fonts****
+*/
+@font-face {
+  font-display: swap;
+  font-family: "poppins";
+  font-style: normal;
+  src: url("/fonts/Poppins/Poppins-Regular.ttf") format("woff");
+}
+@font-face {
+  font-display: swap;
+  font-family: "PlayfairDisplay";
+  font-style: normal;
+  src: url("/fonts/Playfair_Display/PlayfairDisplay-Regular.ttf") format("woff");
+}
+h1 > h2 > h3 {
+  font-family: var(--font-family-playfair);
+}
+
+h1 {
+  font-size: var(--font-h1-size);
+}
+
+p {
+  font-family: var(--font-family-poppins);
+  font-size: var(--font-base-body-px);
+}
+
+/*
+* Hér er allt sem tengist Book section svæðinu
+*/
+.container {
+  background-color: var(--color-book-section);
+  height: 75vh;
+  display: flex;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+.container .left-column {
+  display: flex;
+  align-items: center;
+}
+
+.container .right-column img {
+  position: absolute;
+  margin-top: 150px;
+  box-shadow: -5px -5px 10px gray;
+}
+
+.button {
+  background-color: transparent;
+  color: var(--color-lightbrown);
+  border-color: var(--color-lightbrown);
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+/*
+* Hér er allt sem tengist footer
+*/
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.newsletter-container {
+  display: flex;
+  justify-content: center;
+  background-color: var(--color-text);
+  min-height: 10rem;
+}
+
+.newsletter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 100%;
+  margin: 0 auto;
+}
+.newsletter p {
+  color: var(--color-lightbrown);
+}
+.newsletter button {
+  background-color: transparent;
+  color: var(--color-lightbrown);
+  border-color: var(--color-lightbrown);
+  border-style: solid;
+  border-width: 1px;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+.newsletter label, .newsletter input {
+  display: block;
+  margin-bottom: 0.25rem;
+  color: var(--color-primary);
+}
+.newsletter input {
+  background-color: var(--color-text);
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-color: var(--color-lightbrown);
+  padding-bottom: 0.25rem;
+}
+.newsletter h2 {
+  color: var(--color-primary);
+}
+
+.vertical-flex {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
